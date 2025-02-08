@@ -10,4 +10,11 @@ export class OrdersService {
   async handelPlaceOrder(order: CreateOrderDto) {
     return await this.orderModel.create(order);
   }
+
+  async getAllOrders() {
+    return this.orderModel.find();
+  }
+  async getOrderById(id) {
+    return this.orderModel.findById(id);
+  }
 }

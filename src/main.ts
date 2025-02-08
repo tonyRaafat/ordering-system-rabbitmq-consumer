@@ -11,6 +11,8 @@ async function bootstrap() {
       options: {
         urls: ['amqp://admin:admin@localhost:5672'],
         queue: 'orders-queue',
+        exchange: 'demo',
+        routingKey: 'key-r',
       },
     },
   );
