@@ -1,7 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
 
-export type OrderDocument = HydratedDocument<Order>;
+export type OrderDocument = Document & Order;
 
 @Schema()
 export class Order {
@@ -12,7 +11,7 @@ export class Order {
   productName: string;
 
   @Prop()
-  quantity: string;
+  quantity: number;
 }
 
 export const OrderSchema = SchemaFactory.createForClass(Order);
