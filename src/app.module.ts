@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { OrdersModule } from './orders/orders.module';
+import { SearchModule } from './search/search.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/order-system'),
-    OrdersModule,
+    SearchModule,
   ],
 })
 export class AppModule {}

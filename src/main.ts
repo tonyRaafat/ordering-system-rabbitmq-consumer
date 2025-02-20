@@ -9,8 +9,8 @@ async function bootstrap() {
     {
       transport: Transport.RMQ,
       options: {
-        urls: ['amqp://admin:admin@localhost:5672'],
-        queue: 'orders-queue',
+        urls: ['amqp://guest:guest@localhost:5672'],
+        queue: 'elastic-queue',
         exchange: 'demo',
         routingKey: 'key-r',
       },
